@@ -3,9 +3,7 @@
 
 def isPrime(num)
 	for n in 2..(num**0.5)
-		if num % n == 0
-			return false
-		end
+		if num % n == 0 then return false end
 	end
 	return true
 end
@@ -15,9 +13,7 @@ step = 1
 
 until primeCount == 10001
 	step += 1
-	if isPrime(step)
-		primeCount+=1
-	end
+	if isPrime(step) then primeCount+=1 end
 end
 
-puts step
+puts "The 10,000st prime number is #{step}"
