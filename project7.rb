@@ -7,9 +7,7 @@ largestProduct = 0
 
 for n in 0..(num.length-12)
 	prod = num[n].to_i * num[n+1].to_i * num[n+2].to_i * num[n+3].to_i * num[n+4].to_i * num[n+5].to_i * num[n+6].to_i * num[n+7].to_i * num[n+8].to_i * num[n+9].to_i * num[n+10].to_i * num[n+11].to_i * num[n+12].to_i
-	if largestProduct < prod
-		largestProduct = prod
-	end
+	if largestProduct < prod then largestProduct = prod end
 end
 
 puts "The largest product made from 13 adjacent digits in the 1000-digit number is: \n#{largestProduct}"
