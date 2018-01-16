@@ -12,9 +12,8 @@ $fibCount = 2 	# $x and $y variables are equivalent to F1 and F2 terms in fibona
 
 def fib()
 	$fibCount+=1
-	z = $x + $y
-	$x = $y
-	$y = z
+	$y += $x
+	$x = $y - $x
 end
 
 until $y.to_s.length >= 1000
