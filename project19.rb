@@ -8,9 +8,9 @@ def factorial(num)
 	return num
 end
 
-digits = (factorial(100)).to_s
 sum = 0
+
+digits = (factorial(100)).to_s
 digits.split("").each { |n| sum += n.to_i }
 
-
-puts " The sum of the digit in the number 100! is #{sum}"
+puts "The sum of the digits in the number 100! is #{sum}"
