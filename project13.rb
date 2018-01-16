@@ -7,11 +7,7 @@
 # Which starting number, under one million, produces the longest chain?
 
 def collatz(num,count=0)
-	if num != 1 
-		num % 2 == 0 ? collatz(num/2,count+1) : collatz(num*3+1,count+1)
-	else
-		return count
-	end
+	num != 1 ? num % 2 == 0 ? collatz(num/2,count+1) : collatz(num*3+1,count+1) : count
 end
 
 largestCollatz = [0,0]
@@ -24,4 +20,5 @@ for n in 100..1000000
 	end
 end
 
-puts "The longest collatz sequence made from a startign number under one million is #{largestCollatz[0]} steps long. The starting number is #{largestCollatz[1]}"
+puts "The longest collatz sequence made from a startign number under one million is "\
+	"#{largestCollatz[0]} steps long. The starting number is #{largestCollatz[1]}"
